@@ -84,3 +84,17 @@ dockers:
     - "--label=org.opencontainers.image.source={{.GitURL}}"
     extra_files:
       - config.yaml
+
+brews:
+  - name: auto-mcp
+    github:
+      owner: brizzai
+      name: homebrew-auto-mcp
+    homepage: "https://automcp.brizz.ai/"
+    description: "Transform any OpenAPI/Swagger definition into a fully-featured Model Context Protocol (MCP) server"
+    license: Apache-2.0
+    install: |
+      bin.install "auto-mcp"
+    test: |
+      system "#{bin}/auto-mcp", "--help"
+
