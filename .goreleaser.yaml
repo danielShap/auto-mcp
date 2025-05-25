@@ -85,7 +85,7 @@ dockers:
     extra_files:
       - config.yaml
 
-brews:
+homebrew:
   - name: auto-mcp
     github:
       owner: brizzai
